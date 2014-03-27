@@ -1,11 +1,9 @@
 module PiggybakTaxonomy
   class SellableTaxonomy < ActiveRecord::Base
-    self.table_name = "sellable_taxonomies"
-
     belongs_to :navigation_node, :class_name => "::PiggybakTaxonomy::NavigationNode"
     belongs_to :sellable, :class_name => "::Piggybak::Sellable"
     default_scope order('sort ASC')
-    attr_accessible :navigation_node_id, :sellable_id, :sort
+    # attr_accessible :navigation_node_id, :sellable_id, :sort
     
     validates_presence_of :sellable, :sort
 

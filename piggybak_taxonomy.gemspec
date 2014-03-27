@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 3.2.8"
   s.add_dependency "ancestry"
-  s.add_dependency "piggybak_rails_admin_nestable"
+  s.add_dependency "piggybak_rails_admin_nestable", "0.0.6"
 end
