@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    piggybak_taxonomy (0.2.0)
+    piggybak_taxonomy (0.2.1)
       ancestry
       piggybak_rails_admin_nestable (= 0.0.6)
 

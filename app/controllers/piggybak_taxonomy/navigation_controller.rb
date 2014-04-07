@@ -14,7 +14,7 @@ module PiggybakTaxonomy
     def recursive_path(paths, nodes)
       return nodes if paths.empty?
       first = paths.shift
-      node = NavigationNode.find_by_slug(first)
+      node = NavigationNode.where(slug: first).first
       if node && (nodes.empty? || node.parent == nodes.last) && !(nodes.empty? && !node.parent.nil?)
         nodes << node
         nodes = recursive_path(paths, nodes) 
